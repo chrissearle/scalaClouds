@@ -1,3 +1,8 @@
+// See project/build.sbt
+// import com.typesafe.startscript.StartScriptPlugin
+
+// seq(StartScriptPlugin.startScriptForClassesSettings: _*)
+
 name := "clouds"
 
 organization := "net.chrissearle"
@@ -11,3 +16,4 @@ libraryDependencies ++= Seq(
   "net.databinder" %% "unfiltered-jetty" % "0.7.1",
   "org.scalatest" %% "scalatest" % "2.0" % "test"
 )
+

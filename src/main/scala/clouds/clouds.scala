@@ -4,9 +4,12 @@ import java.io.File
 import unfiltered.filter.Plan
 import unfiltered.request._
 import unfiltered.response._
+import scala.util.Properties
 
 object Clouds extends App {
-  unfiltered.jetty.Http(1337).plan(APlan).resources(new File("src/main/webapp/").toURI.toURL).start()
+  val port = Properties.envOrElse("PORT", "1337")
+
+  unfiltered.jetty.Http(port).plan(APlan).resources(new File("src/main/webapp/").toURI.toURL).start()
 }
 
 object APlan extends Plan {
